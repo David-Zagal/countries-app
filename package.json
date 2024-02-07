@@ -12,7 +12,7 @@
 		"delete:docs": "del docs",
 		"copy:dist": "copyfiles -u 2 dist/countries-app/**/* ./docs"
 	},
-	"private": false,
+	"private": true,
 	"dependencies": {
 		"@angular/animations": "^16.2.0",
 		"@angular/common": "^16.2.0",
