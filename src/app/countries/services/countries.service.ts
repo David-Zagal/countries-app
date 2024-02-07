@@ -21,7 +21,7 @@ export class CountriesService {
 
 	constructor (private http: HttpClient) {
 		this.loadFromLocalStorage ();
-		console.log ('CountriesService init');
+		// console.log ('CountriesService init');
 	}
 
 	private saveToLocalStorage (): void {
@@ -42,7 +42,6 @@ export class CountriesService {
 
 	search (valueUrl: string, value: string, region: Region): Observable<Country[]> {
 		const url = `${ this.apiUrl }/${ valueUrl }/${ value != '' ? value : region }`;
-		console.log (url);
 		return this.getCountriesRequest (url).pipe (
 			tap (countries => {
 				if (valueUrl === 'capital') this.cacheStore.byCapital = { value, countries };
