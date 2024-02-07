@@ -10,10 +10,9 @@
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"delete:docs": "del docs",
-
 		"copy:dist": "copyfiles -u 2 dist/countries-app/**/* ./docs"
 	},
-	"private": true,
+	"private": false,
 	"dependencies": {
 		"@angular/animations": "^16.2.0",
 		"@angular/common": "^16.2.0",
