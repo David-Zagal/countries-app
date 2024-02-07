@@ -41,7 +41,8 @@ export class CountriesService {
 	}
 
 	search (valueUrl: string, value: string, region: Region): Observable<Country[]> {
-		const url = `${ this.apiUrl }/${ valueUrl }/${ value }`;
+		const url = `${ this.apiUrl }/${ valueUrl }/${ value != '' ? value : region }`;
+		console.log (url);
 		return this.getCountriesRequest (url).pipe (
 			tap (countries => {
 				if (valueUrl === 'capital') this.cacheStore.byCapital = { value, countries };
