@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"countryApp": {
+		"countriesApp": {
 			"projectType": "application",
 			"schematics": {},
 			"root": "",
@@ -60,10 +60,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "countryApp:build:production"
+							"browserTarget": "countriesApp:build:production"
 						},
 						"development": {
-							"browserTarget": "countryApp:build:development"
+							"browserTarget": "countriesApp:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -71,7 +71,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "countryApp:build"
+						"browserTarget": "countriesApp:build"
 					}
 				},
 				"test": {
